@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beauty Product Categories | Elkha</title>
+
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #fff9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            padding: 10px 20px;
+        }
+
+        .navbar-brand img {
+            width: 210px;
+            height: 70px;
+            object-fit: contain;
+        }
+
+        .nav-link {
+            color: black;
+            font-weight: 600;
+            margin: 5px;
+        }
+
+        .nav-link:hover {
+            color: #d66b91;
+        }
+
+        .nav-link.active {
+            background-color: black !important;
+            color: white !important;
+        }
+
+        /* Category Section */
+        .category-section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        .product-link {
+            display: block;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .product-card {
+            height: 100%;
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #f1e5e8;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-wrapper {
+            overflow: hidden;
+        }
+
+        .card-body {
+            padding: 20px 15px;
+            text-align: center;
+        }
+
+        .card-body h5 {
+            font-size: 19px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card-body p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .product-link:focus-visible {
+            outline: 3px solid #d66b91;
+            outline-offset: 4px;
+            border-radius: 14px;
+        }
+
+        @media (max-width: 576px) {
+            .category-section {
+                padding: 35px 0;
+            }
+
+            .section-title {
+                font-size: 25px;
+            }
+
+            .product-card img {
+                height: 190px;
+            }
+
+            .card-body h5 {
+                font-size: 17px;
+            }
+
+            .navbar-brand img {
+                width: 160px;
+                height: auto;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="INDEX.HTML">
+            <img src="IMAGES/Minimalist Elkha Wordmark.png"
+                 alt="Elkha Beauty">
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1"
+             id="navbarNavAltMarkup">
+
+            <div class="offcanvas-header">
+
+                <h5 class="offcanvas-title">Menu</h5>
+
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="offcanvas">
+                </button>
+
+            </div>
+
+            <div class="offcanvas-body">
+
+                <div class="navbar-nav ms-auto">
+
+                    <a class="nav-link" href="INDEX.HTML">HOME</a>
+
+                    <a class="nav-link" href="ABOUT.HTML">ABOUT</a>
+
+                    <a class="nav-link active"
+                       href="CATEGORY.HTML">CATEGORIES</a>
+
+                    <a class="nav-link" href="CONTACT.HTML">CONTACT</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- CATEGORY SECTION -->
+
+<section class="category-section">
+
+    <div class="container">
+
+        <h2 class="section-title">Our Beauty Categories</h2>
+
+        <p class="section-subtitle">
+            Discover everything you need for your beauty routine.
+        </p>
+
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <a href="" class="product-link">
+
+                    <div class="product-card">
+
+                        <div class="image-wrapper">
+                            <img src="IMAGES/mp1.webp"
+                                 alt="Makeup products"
+                                 loading="lazy">
+                        </div>
+
+                        <div class="card-body">
+                            <h5>Makeup Products</h5>
+                            <p>Explore beauty and makeup essentials.</p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <a href="skincare.html" class="product-link">
+
+                    <div class="product-card">
+
+                        <div class="image-wrapper">
+                            <img src="IMAGES/mp2.webp"
+                                 alt="Skincare products"
+                                 loading="lazy">
+                        </div>
+
+                        <div class="card-body">
+                            <h5>Skincare Products</h5>
+                            <p>Discover your daily skincare routine.</p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <a href="haircare.html" class="product-link">
+
+                    <div class="product-card">
+
+                        <div class="image-wrapper">
+                            <img src="IMAGES/mp3.webp"
+                                 alt="Haircare products"
+                                 loading="lazy">
+                        </div>
+
+                        <div class="card-body">
+                            <h5>Haircare Products</h5>
+                            <p>Keep your hair healthy and beautiful.</p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+
+            <!-- Card 4 -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <a href="perfumes.html" class="product-link">
+
+                    <div class="product-card">
+
+                        <div class="image-wrapper">
+                            <img src="IMAGES/mp4.webp"
+                                 alt="Perfumes"
+                                 loading="lazy">
+                        </div>
+
+                        <div class="card-body">
+                            <h5>Perfumes</h5>
+                            <p>Find your favourite fragrances.</p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+
+            <!-- Card 5 -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <a href="lipsticks.html" class="product-link">
+
+                    <div class="product-card">
+
+                        <div class="image-wrapper">
+                            <img src="IMAGES/mp5.webp"
+                                 alt="Lipsticks"
+                                 loading="lazy">
+                        </div>
+
+                        <div class="card-body">
+                            <h5>Lipsticks</h5>
+                            <p>Explore beautiful shades and colours.</p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+
+            <!-- Card 6 -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <a href="facewash.html" class="product-link">
+
+                    <div class="product-card">
+
+                        <div class="image-wrapper">
+                            <img src="IMAGES/mp6.webp"
+                                 alt="Face wash"
+                                 loading="lazy">
+                        </div>
+
+                        <div class="card-body">
+                            <h5>Face Wash</h5>
+                            <p>Refresh your skin every day.</p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+
+            <!-- Card 7 -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <a href="nailcare.html" class="product-link">
+
+                    <div class="product-card">
+
+                        <div class="image-wrapper">
+                            <img src="IMAGES/mp7.webp"
+                                 alt="Nail care products"
+                                 loading="lazy">
+                        </div>
+
+                        <div class="card-body">
+                            <h5>Nail Care</h5>
+                            <p>Beautiful nails with stylish colours.</p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+
+            <!-- Card 8 -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <a href="beautytools.html" class="product-link">
+
+                    <div class="product-card">
+
+                        <div class="image-wrapper">
+                            <img src="IMAGES/mp8.webp"
+                                 alt="Beauty tools"
+                                 loading="lazy">
+                        </div>
+
+                        <div class="card-body">
+                            <h5>Beauty Tools</h5>
+                            <p>Everything you need for your beauty routine.</p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
